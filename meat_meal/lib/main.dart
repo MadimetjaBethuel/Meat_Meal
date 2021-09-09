@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'pages/explore/explore_page.dart';
+import 'pages/like&bucket_list/like_bucket_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ExplorePage(),
+      home: LikeBucketList(),
     );
   }
 }
