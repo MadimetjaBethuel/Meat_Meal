@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'components/getrootbodies.dart';
+import 'package:meat_meal/pages/rootpage/components/bottomnavigationbar.dart';
 
 class RootPage extends StatefulWidget {
   @override
@@ -13,7 +12,7 @@ class _RootPageState extends State<RootPage> {
     // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.white,
-      body: BottomNavigation(),
+      body: BottomNavigationAnimated(),
     );
   }
 }

@@ -6,17 +6,26 @@ import 'components/likes.dart';
 class LikeBucketList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: Padding(
+          padding: const EdgeInsets.only(
+            left: 18,
+          ),
+        ),
+      ),
       body: DefaultTabController(
         length: 2,
         child: Column(
           children: [
             Container(
-              constraints: BoxConstraints(maxHeight: 200),
+              constraints: BoxConstraints(maxHeight: 500),
               child: Material(
                 color: Colors.white,
                 child: TabBar(
                   indicatorColor: Colors.blue,
-                  isScrollable: true,
+                  isScrollable: false,
                   tabs: [
                     Text(
                       "Likes",

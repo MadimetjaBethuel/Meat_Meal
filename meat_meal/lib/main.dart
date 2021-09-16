@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'pages/Registration/bubbles.dart';
 import 'pages/explore/explore_page.dart';
 import 'pages/like&bucket_list/like_bucket_list.dart';
-import 'pages/more_info/more_info.dart';
+
 import 'pages/rootpage/rootpage.dart';
 
 void main() {
