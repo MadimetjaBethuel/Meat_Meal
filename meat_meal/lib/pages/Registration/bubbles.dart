@@ -8,5 +8,3 @@ class Demo extends StatelessWidget {
     return Container();
   }
 }
-
-final root = BubbleNode.node();
