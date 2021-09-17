@@ -20,7 +20,8 @@ class LikeBucketList extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              constraints: BoxConstraints(maxHeight: 500),
+              height: 50,
+              // constraints: BoxConstraints(maxHeight: 500),
               child: Material(
                 color: Colors.white,
                 child: TabBar(
@@ -42,6 +43,9 @@ class LikeBucketList extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Expanded(
               child: TabBarView(

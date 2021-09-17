@@ -42,44 +42,36 @@ class _BottomNavigationAnimatedState extends State<BottomNavigationAnimated> {
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(
-            top: Radius.circular(36.0),
+      bottomNavigationBar: BottomNavyBar(
+        containerHeight: 70,
+        showElevation: true,
+        selectedIndex: currentIndex,
+        items: [
+          BottomNavyBarItem(
+            icon: Icon(
+              Ionicons.ios_home,
+            ),
+            title: Text("Home"),
+            activeColor: Colors.blue,
+            inactiveColor: Colors.grey,
           ),
-        ),
-        child: BottomNavyBar(
-          containerHeight: 70,
-          showElevation: true,
-          selectedIndex: currentIndex,
-          items: [
-            BottomNavyBarItem(
-              icon: Icon(
-                Ionicons.ios_home,
-              ),
-              title: Text("Home"),
-              textAlign: TextAlign.center,
-              activeColor: Colors.blue,
-              inactiveColor: Colors.grey,
+          BottomNavyBarItem(
+            icon: Icon(
+              Ionicons.md_heart,
             ),
-            BottomNavyBarItem(
-              icon: Icon(
-                Ionicons.md_heart,
-              ),
-              title: Text("Likes"),
-              activeColor: Colors.blue,
-              inactiveColor: Colors.grey,
-            ),
-            BottomNavyBarItem(
-              icon: Icon(Ionicons.ios_settings),
-              title: Text("Home"),
-              activeColor: Colors.blue,
-              inactiveColor: Colors.grey,
-            ),
-          ],
-          onItemSelected: (index) =>
-              setState(() => _pageController.jumpToPage(index)),
-        ),
+            title: Text("Likes"),
+            activeColor: Colors.blue,
+            inactiveColor: Colors.grey,
+          ),
+          BottomNavyBarItem(
+            icon: Icon(Ionicons.ios_settings),
+            title: Text("Home"),
+            activeColor: Colors.blue,
+            inactiveColor: Colors.grey,
+          ),
+        ],
+        onItemSelected: (index) =>
+            setState(() => _pageController.jumpToPage(index)),
       ),
     );
   }
