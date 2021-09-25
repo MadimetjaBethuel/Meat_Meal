@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meat_meal/data/like_json.dart';
+import 'package:meat_meal/pages/productpage/product_page.dart';
 
 class Likes extends StatelessWidget {
   @override
@@ -13,23 +14,33 @@ class Likes extends StatelessWidget {
         children: List.generate(
           likes_json.length,
           (index) {
-            return Container(
-              width: (size.width - 15 / 2),
-              height: 250,
-              child: Stack(
-                children: [
-                  Container(
-                    width: (size.width - 15 / 2),
-                    height: 250,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(
-                            (likes_json[index]['img']),
-                          ),
-                          fit: BoxFit.cover),
-                    ),
-                  )
-                ],
+            return InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    pageBuilder: (Context, a, b) => ProductPage(),
+                  ),
+                );
+              },
+              child: Container(
+                width: (size.width - 15 / 2),
+                height: 250,
+                child: Stack(
+                  children: [
+                    Container(
+                      width: (size.width - 15 / 2),
+                      height: 250,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                              (likes_json[index]['img']),
+                            ),
+                            fit: BoxFit.cover),
+                      ),
+                    )
+                  ],
+                ),
               ),
             );
           },
