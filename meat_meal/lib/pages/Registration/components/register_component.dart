@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:meat_meal/back-end/authenticatiuon/authentication.dart';
 import 'package:meat_meal/widgets/button.dart';
 import 'package:meat_meal/widgets/logo.dart';
 
 import 'welcome_text.dart';
 
 class RegisterLayout extends StatelessWidget {
+  Authentication authentication = Authentication();
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -22,7 +24,9 @@ class RegisterLayout extends StatelessWidget {
             textColor: Colors.white,
             height: 60.0,
             color: Colors.cyan,
-            onPressed: () {},
+            onPressed: () async {
+              await authentication.googleSignIn();
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
