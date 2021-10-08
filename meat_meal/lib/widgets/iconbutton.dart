@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
 
-class RoundedButton extends StatelessWidget {
-  final Color color;
+class ButtonIcon extends StatelessWidget {
+  final ImageIcon icon;
   final String text;
-  final String path;
   final VoidCallback onPressed;
+  final Color color;
 
-  const RoundedButton({
-    this.color,
+  const ButtonIcon({
+    this.icon,
     this.text,
-    this.path,
     this.onPressed,
+    this.color,
   });
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return ElevatedButton(
+    return ElevatedButton.icon(
       onPressed: onPressed,
-      child: Text(text),
+      icon: icon,
+      label: Text(text),
       style: ElevatedButton.styleFrom(
-        primary: color,
-        minimumSize: const Size(340, 40),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
+        minimumSize: const Size(340, 50),
+        primary: color,
       ),
     );
   }

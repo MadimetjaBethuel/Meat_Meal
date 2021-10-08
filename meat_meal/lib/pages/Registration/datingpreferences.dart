@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meat_meal/pages/Registration/components/numpicker.dart';
 import 'package:meat_meal/widgets/button.dart';
 
-class Iam extends StatelessWidget {
+class DatingPrefernce extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,8 +11,11 @@ class Iam extends StatelessWidget {
         children: [
           SizedBox(height: 60),
           Container(
-            child: Text('I am',
-                style: TextStyle(fontSize: 80.0, fontWeight: FontWeight.bold)),
+            padding: EdgeInsets.symmetric(
+              horizontal: 10,
+            ),
+            child: Text('Sexual Preference',
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
           ),
           SizedBox(height: 40),
           Column(

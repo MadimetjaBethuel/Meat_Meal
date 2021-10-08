@@ -1,0 +1,13 @@
+{
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "MeatMeals",
+  "version": "3.1",
+  "frontend": "flutter",
+  "flutter": {
+    "config": {
+      "ResDir": "/Users/madimetja/Documents/Flutter/project/Meat_Meal/meat_meal"
+    }
+  }
+}
